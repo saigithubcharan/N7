@@ -1,0 +1,89 @@
+.cloud-section {
+  background: var(--dark-bg);
+  position: relative;
+}
+.cloud-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='600' height='400' viewBox='0 0 600 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 200 Q150 100 300 200 Q450 300 600 200' stroke='%230f2540' stroke-width='1' fill='none' opacity='0.5'/%3E%3Cpath d='M0 250 Q150 150 300 250 Q450 350 600 250' stroke='%230f2540' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E") no-repeat center;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cloud-title {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.cloud-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* AML Dashboard */
+.aml-dashboard {
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  border-radius: 12px;
+}
+.aml-header {
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8f0fe;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aml-title-text { font-size: 0.9rem; font-weight: 600; color: #1a2535; }
+.aml-sub { font-size: 0.7rem; color: #999; }
+.aml-body { padding: 16px; }
+
+.aml-stat-card {
+  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid #f0f0f0;
+}
+.aml-stat-card.red { border-top: 3px solid #ef4444; }
+.aml-stat-card.yellow { border-top: 3px solid #f59e0b; }
+.aml-stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a2535;
+}
+.aml-stat-card.red .aml-stat-number { color: #ef4444; }
+.aml-stat-card.yellow .aml-stat-number { color: #f59e0b; }
+.aml-stat-label { font-size: 0.7rem; color: #999; margin-top: 4px; line-height: 1.4; }
+
+.aml-chart-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 12px;
+  height: 100%;
+}
+.aml-chart-title { font-size: 0.7rem; font-weight: 600; color: #1a2535; margin-bottom: 8px; }
+.aml-donut { display: flex; justify-content: center; align-items: center; padding: 8px 0; }
+
+.aml-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 80px;
+  padding-top: 4px;
+}
+.aml-bar { width: 16px; border-radius: 3px 3px 0 0; transition: all 0.3s ease; }
+
+.aml-table { font-size: 0.68rem; }
+.aml-table-header, .aml-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.4fr 0.8fr;
+  gap: 4px;
+  padding: 5px 6px;
+}
+.aml-table-header { background: #2563eb; color: #fff; border-radius: 4px 4px 0 0; font-weight: 600; }
+.aml-table-row { border-bottom: 1px solid #f0f0f0; color: #555; }
+.aml-table-row:hover { background: #f8fafc; }
